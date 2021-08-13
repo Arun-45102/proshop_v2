@@ -1,0 +1,40 @@
+{
+  "name": "proshop_v2",
+  "version": "1.0.0",
+  "description": "The advanced version for proshop previous version",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destory": "node backend/seeder -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arun-45102/proshop_v2.git"
+  },
+  "author": "Arun Kumar M",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arun-45102/proshop_v2/issues"
+  },
+  "homepage": "https://github.com/Arun-45102/proshop_v2#readme",
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.5",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2"
+  }
+}
